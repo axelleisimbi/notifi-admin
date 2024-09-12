@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+
+    <!-- Side Menu -->
+    <div class="side-menu" id="sideMenu">
+        <div class="logo">
+            <img src="logo.png" alt="Company Logo">
+        </div>
+        <ul>
+            <li><i class="fa fa-tachometer-alt"></i> Dashboard</li>
+            <li><i class="fa fa-chart-line"></i> Analytics</li>
+            <li><i class="fa fa-file-alt"></i> Reports</li>
+             <li><i class="fa fa-users"></i> Admins</li>
+            <li><i class="fa fa-cog"></i> Settings</li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content" id="mainContent">
+        <!-- Header -->
+        <header>
+            <div class="left">
+                <button id="menuToggle"><i class="fa fa-bars"></i></button>
+            </div>
+            <div class="right">
+                <!-- Notification Bell -->
+                <i class="fa fa-bell"></i>
+
+                <!-- Date and Time with Icon -->
+                <span id="dateTime">
+                    <i class="far fa-clock"></i> 
+                    <span class="date-time-text"></span>
+                </span>
+
+                <!-- User Profile Icon -->
+                <div class="user-profile">
+                    <i class="fa fa-user-circle"></i>
+                </div>
+            </div>
+        </header>
+
+        <!-- Body Content -->
+<div class="body-content">
+    <div class="button-container-wrapper">
+        <div class="button-container">
+            <button class="btn import-btn">
+                <i class="fa fa-upload"></i> Import List
+            </button>
+            <button class="btn register-btn">
+                <i class="fa fa-plus"></i> Register User
+            </button>
+        </div>
+    </div>
+    
+    <div class="search-container">
+        <form class="search-form">
+            <!-- Name, PF Number, Gender (First Line) -->
+            <div class="input-group">
+                <label for="name-filter">Name:</label>
+                <input type="text" id="name-filter" placeholder="Enter name" class="search-input">
+            </div>
+    
+            <div class="input-group">
+                <label for="pfno-filter">PF Number:</label>
+                <input type="text" id="pfno-filter" placeholder="Enter PF number" class="search-input">
+            </div>
+    
+            <div class="input-group">
+                <label for="gender-filter">Gender:</label>
+                <select id="gender-filter" class="search-input">
+                    <option value="">All</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+            </div>
+    
+            <!-- Birthdays, Start Date, End Date, Filter Button (Second Line) -->
+            <div class="input-group">
+                <label for="birthday-filter">Birthdays:</label>
+                <select id="birthday-filter" class="search-input">
+                    <option value="all">All</option>
+                    <option value="today">Today</option>
+                    <option value="7-days">This week</option>
+                    <option value="month">This month</option>
+                </select>
+            </div>
+    
+            <div class="input-group">
+                <label for="start-date">Start Date:</label>
+                <input type="date" id="start-date" class="search-input">
+            </div>
+    
+            <div class="input-group">
+                <label for="end-date">End Date:</label>
+                <input type="date" id="end-date" class="search-input">
+            </div>
+    
+            <button type="submit" class="btn search-btn">Filter</button>
+        </form>
+    </div>
+    
+    <!-- Table -->
+    <table>
+        <thead>
+            <tr>
+                <th>PF Number</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Gender</th>
+                <th>Date of birth</th>
+                <th>Email</th>
+                <th>Phone Number</th>
+                <th>Notification</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Add table rows here -->
+        </tbody>
+    </table>
+</div>
+
+
+    <footer>
+        <p>Admin Dashboard Footer</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,262 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    font-weight: normal;
+}
+
+/* Side Menu */
+.side-menu {
+    width: 200px;
+    height: 100vh;
+    background-color: #fff;
+    color: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: all 0.3s ease;
+    overflow: hidden; /* Ensure content doesn't overflow outside the menu */
+}
+
+.side-menu.hidden {
+    transform: translateX(-100%);
+}
+
+.side-menu .logo {
+    display: flex;
+    justify-content: center; /* Center the logo horizontally */
+    align-items: center;     /* Center the logo vertically */
+    height: 100px; /* Adjust the height to give the logo some space */
+    padding: 10px; /* Optional padding around the logo */
+    margin-bottom: 30px; 
+    box-sizing: border-box;
+}
+
+.side-menu .logo img {
+    max-width: 100%; /* Ensure the image does not exceed the container's width */
+    height: auto;    /* Maintain aspect ratio */
+    max-height: 100%; /* Make sure the height fits within the logo container */
+}
+
+.side-menu ul {
+    list-style-type: none;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 10;
+}
+
+.side-menu ul li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.side-menu ul li i {
+    margin-right: 10px;
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 200px;
+    padding: 20px;
+    transition: margin-left 0.3s ease;
+}
+
+.main-content.expanded {
+    margin-left: 0;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header .left button {
+    background-color: transparent;
+    border: none;
+    font-size: 1.2rem;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+header .right {
+    display: flex;
+    align-items: center;
+}
+
+header .right i {
+    font-size: 1.2rem;
+    margin-right: 30px;
+}
+
+#dateTime {
+    display: flex;
+    align-items: center;
+    font-size: 0.7rem;
+    margin-right: 20px;
+}
+
+#dateTime i {
+    margin-right: 8px;
+}
+
+.user-profile i {
+    font-size: 1.8rem;
+}
+
+/* Body Content */
+.body-content {
+    margin-top: 20px;
+}
+/* Button Container Wrapper */
+.button-container-wrapper {
+    background-color: white; /* White background for the enclosure */
+    padding: 10px 15px; /* Reduced padding to decrease the height *
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow for depth */
+    margin-bottom: 20px; /* Adds spacing below the enclosure */
+}
+/* Button Container */
+.button-container {
+    display: flex;
+    justify-content: flex-end; /* Aligns the buttons to the right */
+    margin-bottom: 10px; /* Optional: Adds spacing below the button container */
+}
+
+.btn {
+    padding: 10px 20px;
+    margin-left: 10px; /* Adjusted to left margin for spacing between buttons */
+    background-color: white; /* Button background color */
+    color: #000; /* Button text color */
+    border: 2px solid #6a040f; /* Border color and width */
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px; /* Optional: Adjusts the font size */
+}
+/* Hover effect */
+.btn:hover {
+    background-color: #6a040f; /* Changes background color on hover */
+    color: white; /* Changes text color to white on hover */
+}
+
+/* Search container styles */
+.search-container {
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1300px; /* Increased container width */
+    margin-top: 20px;transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Enlarged search container on click */
+.search-container.enlarged {
+    transform: scale(1.06); /* Slight enlargement */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Deeper shadow effect */
+}
+/* Search form styles */
+.search-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: space-between;
+}
+
+/* Input group styles */
+.input-group {
+    display: flex;
+    align-items: center;
+    flex-basis: calc(20% - 10px); /* Adjusted for two-line layout */
+}
+
+/* Label styles */
+.input-group label {
+    margin-right: 10px; /* Space between label and input */
+    white-space: nowrap; /* Prevents label text from wrapping */
+    flex: 0 0 20%; /* Makes label take up 30% of the container width */
+}
+
+/* Input styles */
+.search-input {
+    flex: 1; /* Allows the input to take the remaining space */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+}
+
+/* Special case for dates and button */
+.input-group:nth-last-child(3), /* Start Date */
+.input-group:nth-last-child(2), /* End Date */
+.input-group:nth-last-child(1) { /* Filter Button */
+    flex-basis: calc(30% - 10px); /* Adjusted to fit all elements in one line */
+}
+
+/* Filter button */
+.search-btn {
+    background-color: #6A040F;
+    color: white;
+    border: none;
+    padding: 5px 70px; /* Decreased width and height */
+    border-radius: 25px; /* Added border radius */
+    cursor: pointer;
+    text-align: center;
+    font-size: 18px; /* Smaller font size */
+    flex: 0 0 auto; /* Prevents the button from growing */
+}
+
+.search-btn:hover {
+    background-color: #820519;
+}
+
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: white; /* Set the entire table's background to white */
+}
+
+table th, table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+    background-color: white; /* Ensure all table cells have a white background */
+}
+
+thead {
+    background-color: white; /* Set table header background to white */
+}
+
+tbody {
+    background-color: white; /* Set table body background to white */
+}
+
+
+/* Footer styling */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff; /* Footer background color */
+    color: black;
+    text-align: center;
+    padding: 10px;
+    border-top: 1px solid #ccc; /* Optional: adds a top border to the footer */
+}
+
+/* Adjust for smaller devices */
+@media (max-width: 600px) {
+    footer {
+        padding: 15px;
+    }
+}
